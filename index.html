@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pousada Caminho da Fé | O Descanso do Peregrino</title>
+    <title>Pousada Caminho da Fé | Inconfidentes MG</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -13,7 +13,7 @@
             --earth: #5D4037;   
             --sand: #F5F1E6;    
             --white: #ffffff;
-            --shadow: 0 15px 35px rgba(0,0,0,0.1);
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -22,34 +22,34 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--sand);
             color: #444;
-            line-height: 1.8;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
+        /* HEADER */
         header {
             position: fixed;
             width: 100%;
             top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 8%;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             border-bottom: 3px solid var(--primary);
         }
 
-        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--earth); }
-        .logo span { color: var(--primary); }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--earth); }
+        .logo-text span { color: var(--primary); }
 
-        nav a { margin-left: 25px; text-decoration: none; color: var(--earth); font-weight: 600; font-size: 13px; text-transform: uppercase; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--earth); font-weight: 700; font-size: 13px; text-transform: uppercase; }
 
-        /* HERO SECTION */
+        /* HERO - COM LOGO ENQUADRADA */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(93, 64, 55, 0.5)), url("imagens/fachada.jpg") center/cover no-repeat fixed;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("imagens/fachada.jpg") center/cover no-repeat fixed;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -59,79 +59,79 @@
             position: relative;
         }
 
-        /* LOGO ENQUADRADA E BONITA */
-        .logo-container {
+        /* A LOGO ENQUADRADA E BONITA AQUI */
+        .badge-logo {
             position: absolute;
-            top: 110px;
+            top: 120px;
             right: 8%;
-            width: 140px;
-            height: 140px;
-            background: var(--white);
-            border-radius: 50%; /* Torna circular */
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            padding: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 4px solid var(--primary);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 5px solid var(--primary);
             z-index: 10;
         }
 
-        .logo-container img {
+        .badge-logo img {
             width: 100%;
             height: auto;
             object-fit: contain;
         }
 
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 8vw, 80px); margin-bottom: 10px; }
-        .hero p { font-family: 'Caveat', cursive; font-size: 28px; color: var(--primary); margin-bottom: 35px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(35px, 8vw, 75px); line-height: 1.1; margin-bottom: 10px; }
+        .hero p { font-family: 'Caveat', cursive; font-size: 30px; color: var(--primary); margin-bottom: 30px; }
 
-        .btn-peregrino {
+        .btn-whats {
             background: var(--primary);
             color: var(--earth);
-            padding: 18px 45px;
+            padding: 18px 40px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 700;
             text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             transition: 0.3s;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
-        .btn-peregrino:hover { background: var(--white); transform: translateY(-3px); }
+        .btn-whats:hover { background: white; transform: translateY(-3px); }
 
         /* SEÇÕES */
         section { padding: 80px 8%; max-width: 1200px; margin: auto; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 36px; text-align: center; margin-bottom: 50px; color: var(--earth); }
-        .section-title::after { content: "➡"; display: block; color: var(--primary); transform: rotate(90deg); margin-top: 10px; }
+        .title { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 40px; color: var(--earth); }
+        .title::after { content: "➡"; display: block; color: var(--primary); transform: rotate(90deg); margin-top: 5px; }
 
-        /* POLAROIDS */
-        .grid-polaroid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .polaroid { background: white; padding: 15px 15px 40px 15px; box-shadow: var(--shadow); transform: rotate(-2deg); transition: 0.3s; }
-        .polaroid:nth-child(even) { transform: rotate(2deg); }
-        .polaroid img { width: 100%; height: 250px; object-fit: cover; }
-        .polaroid p { text-align: center; font-family: 'Caveat', cursive; font-size: 22px; margin-top: 10px; }
+        /* FOTOS POLAROID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 15px 15px 40px; box-shadow: var(--shadow); transform: rotate(-1.5deg); transition: 0.3s; }
+        .card:nth-child(even) { transform: rotate(1.5deg); }
+        .card img { width: 100%; height: 260px; object-fit: cover; }
+        .card p { text-align: center; font-family: 'Caveat', cursive; font-size: 24px; margin-top: 15px; }
 
-        /* MAPA ESTILIZADO */
-        .map-wrapper {
+        /* MAPA CERTINHO */
+        .map-box {
             width: 100%;
             height: 450px;
-            border: 10px solid white;
+            border: 8px solid white;
             box-shadow: var(--shadow);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
         }
 
-        /* WHATSAPP */
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px;
+        /* WHATSAPP FLUTUANTE */
+        .wa-link {
+            position: fixed; bottom: 25px; right: 25px;
             background: #25d366; width: 60px; height: 60px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3); z-index: 1000;
         }
-        .whatsapp-float img { width: 30px; filter: brightness(0) invert(1); }
+        .wa-link img { width: 30px; filter: brightness(0) invert(1); }
 
         @media (max-width: 768px) {
-            .logo-container { top: 100px; right: 50%; transform: translateX(50%); width: 110px; height: 110px; }
+            .badge-logo { top: 90px; right: 50%; transform: translateX(50%); width: 120px; height: 120px; }
             nav { display: none; }
         }
     </style>
@@ -139,58 +139,51 @@
 <body>
 
     <header>
-        <div class="logo">Caminho da <span>Fé</span></div>
+        <div class="logo-text">Caminho da <span>Fé</span></div>
         <nav>
             <a href="#sobre">A Pousada</a>
-            <a href="#peregrinos">Peregrino</a>
-            <a href="#localizacao">Mapa</a>
+            <a href="#local">Localização</a>
         </nav>
     </header>
 
     <div class="hero">
-        <div class="logo-container">
+        <div class="badge-logo">
             <img src="https://seeklogo.com/images/C/caminho-da-fe-logo-FAE10B9481-seeklogo.com.png" alt="Logo Oficial">
         </div>
         <h1>Pousada<br>Caminho da Fé</h1>
-        <p>"Onde o corpo descansa e a alma caminha"</p>
-        <a href="https://wa.me/5535998171465?text=Olá! Gostaria de reservar um quarto na Pousada Caminho da Fé." class="btn-peregrino" target="_blank">Reservar Estadia</a>
+        <p>"O descanso oficial do peregrino"</p>
+        <a href="https://wa.me/5535998171465" class="btn-whats" target="_blank">Consultar Disponibilidade</a>
     </div>
 
     <section id="sobre">
-        <h2 class="section-title">O Ponto de Apoio em Inconfidentes</h2>
-        <div style="text-align: center; max-width: 800px; margin: auto;">
-            <p>Sabemos que a jornada é longa. Nossa missão é oferecer o melhor descanso para que você siga firme até Aparecida. Café da manhã completo, banho revigorante e silêncio absoluto.</p>
+        <h2 class="title">Sua parada em Inconfidentes</h2>
+        <div class="grid">
+            <div class="card"><img src="imagens/quarto.jpg"><p>Quartos Aconchegantes</p></div>
+            <div class="card"><img src="imagens/servicos.jpg"><p>Café da Manhã Mineiro</p></div>
+            <div class="card"><img src="imagens/vista.jpg"><p>Energia Renovada</p></div>
         </div>
     </section>
 
-    <section id="peregrinos">
-        <div class="grid-polaroid">
-            <div class="polaroid"><img src="imagens/vista.jpg"><p>Vista da Mantiqueira</p></div>
-            <div class="polaroid"><img src="imagens/quarto.jpg"><p>Conforto e Paz</p></div>
-            <div class="polaroid"><img src="imagens/servicos.jpg"><p>Energia Renovada</p></div>
-        </div>
-    </section>
-
-    <section id="localizacao">
-        <h2 class="section-title">Localização na Rota</h2>
-        <div class="map-wrapper">
+    <section id="local">
+        <h2 class="title">Onde Estamos</h2>
+        <div class="map-box">
             <iframe 
                 width="100%" 
                 height="100%" 
-                frameborder="0" 
                 style="border:0" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14736.43859674062!2d-46.333066986518774!3d-22.31171855663673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c920f3f2d22d2b%3A0x6a1006509a7b6b3e!2sInconfidentes%20-%20MG%2C%2037576-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
-                allowfullscreen>
+                loading="lazy" 
+                allowfullscreen 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.577241280351!2d-46.31711122471505!3d-22.30857207967919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c97b1a9ef5bc9f%3A0x69d825e463e59487!2sPousada%20Caminho%20Da%20F%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr">
             </iframe>
         </div>
-        <p style="text-align: center; margin-top: 20px; font-weight: 600;">📍 MG-290, Inconfidentes - MG</p>
+        <p style="text-align: center; margin-top: 15px; font-weight: 600;">📍 Rodovia MG-290, Inconfidentes - MG</p>
     </section>
 
-    <footer style="background: var(--earth); color: var(--sand); text-align: center; padding: 40px;">
-        <p>© 2026 Pousada Caminho da Fé - Inconfidentes, MG</p>
+    <footer style="background: var(--earth); color: var(--sand); text-align: center; padding: 30px;">
+        <p>© 2026 Pousada Caminho da Fé</p>
     </footer>
 
-    <a href="https://wa.me/5535998171465?text=Olá! Gostaria de reservar um quarto." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5535998171465" class="wa-link" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 
