@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pousada Caminho da Fé | Inconfidentes MG</title>
+<title>Pousada Caminho da Fé</title>
 
 <style>
 :root{
-  --verde:#355e3b;
-  --verde-escuro:#1f3a23;
-  --claro:#f6f8f7;
+  --fundo:#efe9df;
+  --verde:#3a5a40;
+  --verde-escuro:#2c4532;
+  --dourado:#b38b59;
 }
 
 *{
@@ -19,73 +20,72 @@
 }
 
 body{
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background:var(--claro);
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:var(--fundo);
   color:#333;
-  line-height:1.6;
 }
 
 /* HEADER */
 header{
-  background:white;
+  background:var(--verde-escuro);
+  padding:15px 8%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:20px 8%;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
-  position:sticky;
-  top:0;
-  z-index:1000;
+  justify-content:space-between;
+}
+
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:15px;
 }
 
 .logo{
-  height:70px;
-  border-radius:10px;
+  height:80px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+  background:white;
+  padding:5px;
+}
+
+.nome-pousada{
+  color:white;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
 nav a{
+  color:white;
   text-decoration:none;
-  color:var(--verde);
   margin-left:25px;
-  font-weight:600;
+  font-weight:500;
 }
 
 /* HERO */
 .hero{
-  height:85vh;
-  background:url("imagens/entrada.webp") center/cover no-repeat;
+  height:80vh;
+  background:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+  url("imagens/vista.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   color:white;
-  position:relative;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.5);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:50px;
   margin-bottom:15px;
 }
 
 .hero p{
   font-size:20px;
-  margin-bottom:25px;
+  margin-bottom:30px;
 }
 
 .btn{
-  background:#25d366;
+  background:var(--dourado);
   padding:14px 30px;
   border-radius:40px;
   text-decoration:none;
@@ -95,12 +95,12 @@ nav a{
 }
 
 .btn:hover{
-  background:#1ebe5d;
+  background:#9b7447;
 }
 
-/* SECTION */
+/* SEÇÕES */
 section{
-  padding:80px 8%;
+  padding:90px 8%;
 }
 
 .section-title{
@@ -114,14 +114,14 @@ section{
 .sobre{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:50px;
   align-items:center;
 }
 
 .sobre img{
   width:100%;
   border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
 
 /* GALERIA */
@@ -133,29 +133,29 @@ section{
 
 .galeria img{
   width:100%;
-  height:250px;
+  height:260px;
   object-fit:cover;
   border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.2);
   transition:0.4s;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 .galeria img:hover{
-  transform:scale(1.07);
+  transform:scale(1.05);
 }
 
 /* SERVIÇOS */
 .servicos{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:50px;
   align-items:center;
 }
 
 .servicos img{
   width:100%;
   border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
 
 .lista-servicos li{
@@ -169,6 +169,7 @@ iframe{
   height:400px;
   border:none;
   border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -176,7 +177,7 @@ footer{
   background:var(--verde-escuro);
   color:white;
   text-align:center;
-  padding:40px 20px;
+  padding:40px;
   margin-top:60px;
 }
 
@@ -188,7 +189,7 @@ footer{
   }
 
   .hero h1{
-    font-size:34px;
+    font-size:36px;
   }
 }
 </style>
@@ -197,7 +198,11 @@ footer{
 <body>
 
 <header>
-  <img src="imagens/fachada.jpg" class="logo">
+  <div class="logo-box">
+    <img src="imagens/fachada.jpg" class="logo">
+    <div class="nome-pousada">Pousada Caminho da Fé</div>
+  </div>
+
   <nav>
     <a href="#">Início</a>
     <a href="#">Sobre</a>
@@ -207,9 +212,9 @@ footer{
 </header>
 
 <div class="hero">
-  <div class="hero-content">
+  <div>
     <h1>Pousada Caminho da Fé</h1>
-    <p>Conforto, tranquilidade e acolhimento em Inconfidentes MG</p>
+    <p>Tranquilidade, conforto e hospitalidade mineira em Inconfidentes MG</p>
     <a class="btn" 
     href="https://wa.me/5515988390771?text=Olá! Gostaria de informações sobre a Pousada Caminho da Fé."
     target="_blank">
@@ -223,17 +228,18 @@ footer{
   <div class="sobre">
     <div>
       <p>
-        A Pousada Caminho da Fé oferece um ambiente acolhedor e familiar,
-        ideal para peregrinos do Caminho da Fé e visitantes que buscam descanso.
+        Localizada em Inconfidentes – MG, a Pousada Caminho da Fé é referência
+        em acolhimento para peregrinos e turistas que buscam tranquilidade,
+        segurança e conforto.
       </p>
       <br>
       <p>
-        Localizada em Inconfidentes – MG, nossa pousada combina tranquilidade,
-        conforto e excelente custo-benefício.
-        Aqui você encontra hospitalidade mineira e um ambiente seguro para sua estadia.
+        Oferecemos ambiente familiar, atendimento personalizado e excelente
+        custo-benefício, proporcionando uma experiência agradável em meio à
+        natureza e à hospitalidade mineira.
       </p>
     </div>
-    <img src="imagens/vista.jpg">
+    <img src="imagens/entrada.webp">
   </div>
 </section>
 
@@ -241,8 +247,8 @@ footer{
   <h2 class="section-title">Galeria</h2>
   <div class="galeria">
     <img src="imagens/quarto.jpg">
-    <img src="imagens/entrada.webp">
     <img src="imagens/fachada.jpg">
+    <img src="imagens/vista.jpg">
   </div>
 </section>
 
@@ -254,7 +260,7 @@ footer{
       <li>✔ Ambiente familiar e acolhedor</li>
       <li>✔ Local tranquilo e seguro</li>
       <li>✔ Ideal para peregrinos</li>
-      <li>✔ Atendimento personalizado</li>
+      <li>✔ Atendimento atencioso</li>
       <li>✔ Excelente custo-benefício</li>
     </ul>
   </div>
@@ -263,8 +269,7 @@ footer{
 <section>
   <h2 class="section-title">Localização</h2>
   <iframe 
-  src="https://www.google.com/maps?q=Pousada+Caminho+Da+F%C3%A9+Inconfidentes+MG&output=embed"
-  loading="lazy">
+  src="https://www.google.com/maps?q=Pousada+Caminho+Da+F%C3%A9+Inconfidentes+MG&output=embed">
   </iframe>
 </section>
 
