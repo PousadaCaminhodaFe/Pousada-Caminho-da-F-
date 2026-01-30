@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pousada Caminho da Fé | Inconfidentes MG</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---verde-escuro:#0f2e2b;
---verde-medio:#1f4d47;
---dourado:#c6a85b;
---claro:#f5f3ef;
+--verde:#0e2f2c;
+--verde2:#174d47;
+--dourado:#d4af37;
+--claro:#f6f3ec;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -25,14 +25,43 @@ color:#333;
 scroll-behavior:smooth;
 }
 
-h1,h2,h3{
+/* NAV */
+
+nav{
+position:fixed;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(14,47,44,0.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h3{
+color:white;
 font-family:'Playfair Display',serif;
 }
 
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--dourado);
+}
+
+/* HERO */
+
 header{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url("imagens/entrada.webp") center/cover no-repeat;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("imagens/entrada.webp") center/cover fixed no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -43,8 +72,8 @@ padding:20px;
 }
 
 header h1{
-font-size:55px;
-letter-spacing:2px;
+font-size:65px;
+font-family:'Playfair Display',serif;
 }
 
 header span{
@@ -53,22 +82,31 @@ color:var(--dourado);
 
 header p{
 margin-top:20px;
-font-size:18px;
 max-width:700px;
+font-size:18px;
 }
 
-.logo{
-width:120px;
-margin-bottom:20px;
-border-radius:50%;
-border:3px solid var(--dourado);
+.btn{
+margin-top:30px;
+padding:15px 40px;
+background:var(--dourado);
+color:white;
+border-radius:50px;
+text-decoration:none;
+transition:0.4s;
 }
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
 
 section{
-padding:90px 10%;
+padding:110px 10%;
 opacity:0;
-transform:translateY(40px);
-transition:1s ease;
+transform:translateY(50px);
+transition:1s;
 }
 
 section.show{
@@ -78,45 +116,57 @@ transform:translateY(0);
 
 .titulo{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .titulo h2{
-font-size:36px;
-color:var(--verde-escuro);
+font-size:40px;
+font-family:'Playfair Display',serif;
+color:var(--verde);
 }
+
+/* SOBRE */
 
 .sobre{
 background:white;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
+border-radius:25px;
+box-shadow:0 30px 60px rgba(0,0,0,0.08);
 }
 
 .sobre p{
 max-width:900px;
 margin:20px auto;
-font-size:17px;
 line-height:1.8;
 text-align:center;
 }
 
+/* GALERIA */
+
 .galeria{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
 .galeria img{
 width:100%;
-height:260px;
+height:300px;
 object-fit:cover;
 border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
-transition:0.4s;
+transition:0.5s;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .galeria img:hover{
-transform:scale(1.05);
+transform:scale(1.07);
+}
+
+/* SERVIÇOS */
+
+.servicos{
+background:var(--verde2);
+color:white;
+border-radius:25px;
 }
 
 .servicos-container{
@@ -126,53 +176,83 @@ gap:30px;
 }
 
 .servico{
-background:white;
-padding:30px;
+background:rgba(255,255,255,0.08);
+padding:35px;
 border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.08);
 text-align:center;
 transition:0.4s;
 }
 
 .servico:hover{
+background:rgba(255,255,255,0.15);
 transform:translateY(-10px);
 }
 
 .servico h4{
-margin-top:15px;
-color:var(--verde-medio);
+margin-bottom:15px;
+color:var(--dourado);
 }
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+background:white;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.depoimentos p{
+max-width:700px;
+margin:15px auto;
+font-style:italic;
+}
+
+/* MAPA */
+
+iframe{
+width:100%;
+height:400px;
+border-radius:20px;
+border:0;
+}
+
+/* FOOTER */
 
 footer{
-background:var(--verde-escuro);
+background:var(--verde);
 color:white;
 text-align:center;
-padding:30px;
+padding:40px;
+margin-top:60px;
 }
 
-/* WhatsApp flutuante */
+/* WHATSAPP */
+
 .whatsapp{
 position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
-width:65px;
-height:65px;
+width:70px;
+height:70px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 z-index:999;
-transition:0.3s;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
+animation:pulse 2s infinite;
 }
 
 .whatsapp img{
-width:35px;
+width:38px;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
 </style>
@@ -180,71 +260,55 @@ width:35px;
 
 <body>
 
+<nav>
+<h3>Pousada Caminho da Fé</h3>
+<div>
+<a href="#sobre">Sobre</a>
+<a href="#galeria">Galeria</a>
+<a href="#servicos">Serviços</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+
 <header>
-<img src="imagens/fachada.jpg" class="logo">
 <h1>Pousada <span>Caminho da Fé</span></h1>
-<p>Conforto, tranquilidade e acolhimento em Inconfidentes – MG.  
-Uma experiência única para peregrinos e turistas.</p>
+<p>Experiência única de conforto, tranquilidade e acolhimento em Inconfidentes – MG.</p>
+<a href="#contato" class="btn">Reservar Agora</a>
 </header>
 
-<section class="sobre">
-<div class="titulo">
-<h2>Sobre a Pousada</h2>
-</div>
-<p>
-A Pousada Caminho da Fé oferece um ambiente sofisticado e acolhedor,
-ideal para quem busca descanso e tranquilidade em meio à natureza.
-</p>
-<p>
-Localizada estrategicamente em Inconfidentes – MG, proporcionamos
-uma experiência completa com conforto, segurança e atendimento
-personalizado.
-</p>
+<section id="sobre" class="sobre">
+<div class="titulo"><h2>Sobre Nós</h2></div>
+<p>A Pousada Caminho da Fé oferece uma experiência sofisticada e acolhedora para peregrinos e turistas. Localizada em Inconfidentes – MG, combina conforto, natureza e hospitalidade em um ambiente exclusivo.</p>
 </section>
 
-<section>
-<div class="titulo">
-<h2>Nossos Ambientes</h2>
-</div>
+<section id="galeria">
+<div class="titulo"><h2>Nossos Ambientes</h2></div>
 <div class="galeria">
+<img src="imagens/fachada.jpg">
 <img src="imagens/quarto.jpg">
 <img src="imagens/vista.jpg">
-<img src="imagens/fachada.jpg">
 </div>
 </section>
 
-<section>
-<div class="titulo">
-<h2>Serviços Premium</h2>
-</div>
+<section id="servicos" class="servicos">
+<div class="titulo"><h2>Serviços Premium</h2></div>
 <div class="servicos-container">
-<div class="servico">
-<h4>☕ Café da Manhã Completo</h4>
-<p>Produtos frescos e regionais preparados diariamente.</p>
-</div>
-<div class="servico">
-<h4>📶 Wi-Fi Gratuito</h4>
-<p>Internet de qualidade em todos os ambientes.</p>
-</div>
-<div class="servico">
-<h4>🚗 Estacionamento Privativo</h4>
-<p>Segurança e comodidade para seu veículo.</p>
-</div>
-<div class="servico">
-<h4>🌄 Ambiente Familiar</h4>
-<p>Atendimento acolhedor e personalizado.</p>
-</div>
+<div class="servico"><h4>Café da Manhã</h4><p>Buffet completo e regional.</p></div>
+<div class="servico"><h4>Wi-Fi</h4><p>Internet gratuita em toda pousada.</p></div>
+<div class="servico"><h4>Estacionamento</h4><p>Privativo e seguro.</p></div>
+<div class="servico"><h4>Atendimento</h4><p>Personalizado e acolhedor.</p></div>
 </div>
 </section>
 
-<section>
-<div class="titulo">
-<h2>Localização</h2>
-</div>
-<iframe 
-src="https://www.google.com/maps?q=Pousada+Caminho+Da+F%C3%A9+Inconfidentes+MG&output=embed"
-width="100%" height="400" style="border:0;border-radius:20px;">
-</iframe>
+<section class="depoimentos">
+<div class="titulo"><h2>Depoimentos</h2></div>
+<p>"Experiência maravilhosa, ambiente tranquilo e acolhedor."</p>
+<p>"Atendimento impecável e excelente localização."</p>
+</section>
+
+<section id="contato">
+<div class="titulo"><h2>Localização</h2></div>
+<iframe src="https://www.google.com/maps?q=Pousada+Caminho+Da+F%C3%A9+Inconfidentes+MG&output=embed"></iframe>
 </section>
 
 <footer>
@@ -252,7 +316,7 @@ width="100%" height="400" style="border:0;border-radius:20px;">
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/5515988390771?text=Olá! Gostaria de informações sobre a pousada."
+href="https://wa.me/5515988390771?text=Olá! Gostaria de verificar disponibilidade, valores e informações sobre hospedagem na Pousada Caminho da Fé para as seguintes datas:"
 target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
@@ -261,8 +325,7 @@ target="_blank">
 const sections=document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
 sections.forEach(sec=>{
-const top=sec.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
+if(sec.getBoundingClientRect().top<window.innerHeight-120){
 sec.classList.add("show");
 }
 });
