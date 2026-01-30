@@ -26,11 +26,8 @@
             color: #444;
             line-height: 1.8;
             overflow-x: hidden;
-            background-image: radial-gradient(#e0ded8 1px, transparent 1px);
-            background-size: 20px 20px;
         }
 
-        /* HEADER */
         header {
             position: fixed;
             width: 100%;
@@ -49,10 +46,8 @@
         .logo-text { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--earth); }
         .logo-text span { color: var(--primary); }
 
-        nav a { margin-left: 30px; text-decoration: none; color: var(--earth); font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--primary); }
+        nav a { margin-left: 30px; text-decoration: none; color: var(--earth); font-weight: 600; font-size: 14px; text-transform: uppercase; }
 
-        /* HERO COM LOGO ENQUADRADA */
         .hero {
             height: 100vh;
             background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(93, 64, 55, 0.5)), url("imagens/fachada.jpg") center/cover no-repeat fixed;
@@ -81,10 +76,9 @@
             border: 5px solid var(--primary);
             z-index: 10;
         }
-        .badge-logo img { width: 100%; height: auto; object-fit: contain; }
 
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(45px, 10vw, 85px); margin-bottom: 10px; text-shadow: 2px 2px 15px rgba(0,0,0,0.5); }
-        .hero p { font-family: 'Caveat', cursive; font-size: 32px; color: var(--primary); margin-bottom: 40px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(45px, 10vw, 85px); margin-bottom: 10px; }
+        .hero p { font-family: 'Caveat', cursive; font-size: 32px; color: var(--primary); margin-bottom: 40px; }
 
         .btn-peregrino {
             background: var(--primary);
@@ -94,50 +88,55 @@
             border-radius: 50px;
             font-weight: 700;
             text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             transition: 0.3s;
         }
-        .btn-peregrino:hover { background: #fff; transform: translateY(-3px); }
 
-        /* SEÇÕES */
-        section { padding: 100px 8%; max-width: 1400px; margin: auto; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 42px; text-align: center; color: var(--earth); margin-bottom: 60px; }
-        .section-title::after { content: "➡"; display: block; color: var(--primary); font-size: 30px; margin-top: 10px; transform: rotate(90deg); }
+        section { padding: 80px 8%; max-width: 1400px; margin: auto; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 38px; text-align: center; color: var(--earth); margin-bottom: 50px; }
 
         /* GRID POLAROID */
         .grid-polaroid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .polaroid { background: white; padding: 15px 15px 50px; box-shadow: var(--shadow); transform: rotate(-2deg); transition: 0.4s; }
-        .polaroid:nth-child(even) { transform: rotate(2deg); }
+        .polaroid { background: white; padding: 15px 15px 50px; box-shadow: var(--shadow); transform: rotate(-2deg); }
         .polaroid img { width: 100%; height: 300px; object-fit: cover; }
-        .polaroid:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
-        .polaroid p { text-align: center; font-family: 'Caveat', cursive; font-size: 24px; color: #555; margin-top: 15px; }
+        .polaroid p { text-align: center; font-family: 'Caveat', cursive; font-size: 24px; margin-top: 15px; }
 
-        /* CITAÇÃO */
+        /* SEÇÃO DE SERVIÇOS */
+        .servicos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .servico-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-bottom: 4px solid var(--primary);
+        }
+        .servico-item h3 { color: var(--earth); margin-bottom: 10px; font-size: 18px; }
+
         .quote-section {
             background: var(--earth);
             color: var(--sand);
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
             border-radius: 20px;
             margin: 40px 8%;
         }
-        .quote-text { font-family: 'Playfair Display', serif; font-size: 28px; font-style: italic; }
 
-        /* MAPA */
-        .map-frame { border: 10px solid white; box-shadow: var(--shadow); height: 450px; border-radius: 4px; overflow: hidden; }
+        .map-frame { border: 10px solid white; box-shadow: var(--shadow); height: 450px; overflow: hidden; }
 
-        /* WHATSAPP */
         .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
             background: #25d366; width: 65px; height: 65px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 1000;
+            display: flex; align-items: center; justify-content: center; z-index: 1000;
         }
         .whatsapp-float img { width: 35px; filter: brightness(0) invert(1); }
 
         @media (max-width: 768px) {
             .badge-logo { top: 90px; right: 50%; transform: translateX(50%); width: 120px; height: 120px; }
-            nav { display: none; }
         }
     </style>
 </head>
@@ -147,79 +146,76 @@
         <div class="logo-text">Caminho da <span>Fé</span></div>
         <nav>
             <a href="#sobre">A Pousada</a>
-            <a href="#peregrinos">Peregrino</a>
+            <a href="#servicos">Serviços</a>
             <a href="#localizacao">Mapa</a>
         </nav>
     </header>
 
     <div class="hero">
         <div class="badge-logo">
-            <img src="https://seeklogo.com/images/C/caminho-da-fe-logo-FAE10B9481-seeklogo.com.png" alt="Logo Caminho da Fé">
+            <img src="https://seeklogo.com/images/C/caminho-da-fe-logo-FAE10B9481-seeklogo.com.png" alt="Logo Oficial" style="width: 100%;">
         </div>
         <h1>Pousada<br>Caminho da Fé</h1>
         <p>"Onde seus pés descansam e a alma renova"</p>
-        <a href="https://wa.me/5535998171465?text=Olá! Gostaria de reservar um quarto." class="btn-peregrino" target="_blank">Reservar Estadia</a>
+        <a href="https://wa.me/5535998171465" class="btn-peregrino">Reservar Estadia</a>
     </div>
 
     <section id="sobre">
-        <h2 class="section-title">Acolhimento Mineiro</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-            <div style="flex: 1; min-width: 300px; font-size: 18px; text-align: justify;">
-                <p>Aqui em Inconfidentes, sabemos o peso da sua mochila e a alegria da sua chegada. Nossa pousada é um <strong>ponto de apoio</strong> dedicado a quem trilha esse caminho sagrado.</p>
-                <br>
-                <p>Oferecemos o conforto necessário para sua recuperação: banho quente, camas impecáveis e um café da manhã típico para sustentar sua jornada até o próximo destino.</p>
+        <h2 class="section-title">O Descanso do Peregrino</h2>
+        <div class="grid-polaroid">
+            <div class="polaroid">
+                <img src="imagens/vista.jpg">
+                <p>Paz na Varanda</p>
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <img src="imagens/entrada.webp" alt="Entrada da Pousada" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow); border: 5px solid white;">
+            <div class="polaroid">
+                <img src="imagens/quarto.jpg">
+                <p>Sono Merecido</p>
+            </div>
+            <div class="polaroid">
+                <img src="imagens/outra_img.jpg">
+                <p>Acolhimento</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" style="background-color: rgba(255,255,255,0.5);">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico-item">
+                <h3>☕ Café da Manhã</h3>
+                <p>Completo e reforçado para sua caminhada.</p>
+            </div>
+            <div class="servico-item">
+                <h3>🚿 Banho Quente</h3>
+                <p>Ducha revigorante para relaxar os músculos.</p>
+            </div>
+            <div class="servico-item">
+                <h3>🧺 Lavanderia</h3>
+                <p>Espaço para lavar e secar suas roupas.</p>
+            </div>
+            <div class="servico-item">
+                <h3>📶 Wi-Fi Grátis</h3>
+                <p>Para você avisar a família que chegou bem.</p>
             </div>
         </div>
     </section>
 
     <div class="quote-section">
-        <p class="quote-text">"A felicidade não está no destino, mas na jornada."</p>
-        <p style="margin-top: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">— Bom Caminho!</p>
+        <p style="font-family: 'Playfair Display', serif; font-size: 24px; font-style: italic;">"Bom Caminho e um descanso abençoado!"</p>
     </div>
-
-    <section id="peregrinos">
-        <h2 class="section-title">Estrutura do Viajante</h2>
-        <div class="grid-polaroid">
-            <div class="polaroid">
-                <img src="imagens/vista.jpg" alt="Descanso">
-                <p>Paz na Varanda</p>
-            </div>
-            <div class="polaroid">
-                <img src="imagens/quarto.jpg" alt="Conforto">
-                <p>Sono Merecido</p>
-            </div>
-            <div class="polaroid">
-                <img src="imagens/servicos.jpg" alt="Café">
-                <p>Energia p/ Trilha</p>
-            </div>
-        </div>
-    </section>
 
     <section id="localizacao">
         <h2 class="section-title">Localização na Rota</h2>
         <div class="map-frame">
-            <iframe 
-                width="100%" 
-                height="100%" 
-                style="border:0" 
-                loading="lazy" 
-                allowfullscreen 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.483100657502!2d-46.3315694!3d-22.3164104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9291a1ef7db9f%3A0x69d825e463e59487!2sPousada%20Caminho%20da%20F%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1700000000000">
-            </iframe>
+            <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.4716762391636!2d-46.3331828!3d-22.3735742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cb79199ef7bcdf%3A0x69d825e463e59487!2sPousada%20Caminho%20Da%20F%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1700000000000"></iframe>
         </div>
-        <p style="text-align: center; margin-top: 20px; font-weight: 600;">📍 Rodovia MG-290, Inconfidentes - MG</p>
     </section>
 
-    <footer style="background: var(--earth); color: var(--sand); text-align: center; padding: 60px 20px;">
-        <h3 style="font-family: 'Playfair Display'; margin-bottom: 10px;">Pousada Caminho da Fé</h3>
-        <p>Bom Caminho e um descanso abençoado!</p>
-        <p style="font-size: 12px; margin-top: 20px; opacity: 0.6;">© 2026 - O seu refúgio em Inconfidentes, MG</p>
+    <footer style="background: var(--earth); color: var(--sand); text-align: center; padding: 40px;">
+        <p>© 2026 Pousada Caminho da Fé - Inconfidentes, MG</p>
     </footer>
 
-    <a href="https://wa.me/5535998171465" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5535998171465" class="whatsapp-float">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 
