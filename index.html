@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pousada Caminho da Fé | O Descanso do Peregrino</title>
+    <title>Pousada Caminho da Fé | Inconfidentes MG</title>
 
     <link rel="icon" type="image/png" href="https://seeklogo.com/images/C/caminho-da-fe-logo-FAE10B9481-seeklogo.com.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -60,24 +60,6 @@
             position: relative;
         }
 
-        .badge-logo {
-            position: absolute;
-            top: 120px;
-            right: 8%;
-            width: 150px;
-            height: 150px;
-            background: white;
-            border-radius: 50%;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            border: 5px solid var(--primary);
-            z-index: 10;
-        }
-        .badge-logo img { width: 100%; height: auto; object-fit: contain; }
-
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(45px, 10vw, 85px); margin-bottom: 10px; text-shadow: 2px 2px 15px rgba(0,0,0,0.5); }
         .hero p { font-family: 'Caveat', cursive; font-size: 32px; color: var(--primary); margin-bottom: 40px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
 
@@ -102,9 +84,9 @@
 
         .grid-polaroid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .polaroid { background: white; padding: 15px 15px 50px; box-shadow: var(--shadow); transform: rotate(-2deg); transition: 0.4s; }
+        .polaroid:nth-child(even) { transform: rotate(2deg); }
         .polaroid .img-wrap { overflow: hidden; height: 300px; }
-        .polaroid img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; }
-        .polaroid:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+        .polaroid img { width: 100%; height: 100%; object-fit: cover; }
         .polaroid p { text-align: center; font-family: 'Caveat', cursive; font-size: 24px; color: #555; margin-top: 15px; }
 
         .map-frame { border: 10px solid white; box-shadow: var(--shadow); height: 450px; border-radius: 4px; overflow: hidden; }
@@ -120,7 +102,6 @@
         .social-float img { width: 30px; filter: brightness(0) invert(1); }
 
         @media (max-width: 768px) {
-            .badge-logo { top: 90px; right: 50%; transform: translateX(50%); width: 120px; height: 120px; }
             nav { display: none; }
         }
     </style>
@@ -131,26 +112,24 @@
         <div class="logo-text">Caminho da <span>Fé</span></div>
         <nav>
             <a href="#sobre">A Pousada</a>
-            <a href="#localizacao">Localização</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#localizacao">Mapa</a>
         </nav>
     </header>
 
     <div class="hero">
-        <div class="badge-logo">
-            <img src="https://seeklogo.com/images/C/caminho-da-fe-logo-FAE10B9481-seeklogo.com.png" alt="Logo Caminho da Fé">
-        </div>
         <h1>Pousada<br>Caminho da Fé</h1>
-        <p>"Onde seus pés descansam e a alma renova"</p>
-        <a href="https://wa.me/5535998171465" class="btn-peregrino" target="_blank">Reservar via WhatsApp</a>
+        <p>"O descanso merecido do peregrino"</p>
+        <a href="https://wa.me/5535998171465" class="btn-peregrino" target="_blank">Reservar agora</a>
     </div>
 
     <section id="sobre">
         <h2 class="section-title">Acolhimento em Inconfidentes</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
             <div style="flex: 1; min-width: 300px;">
-                <p>Nossa pousada é o ponto de encontro de peregrinos e ciclistas. Oferecemos o repouso necessário com o carinho do sul de Minas.</p>
+                <p>Recebemos você com o melhor do café mineiro e um ambiente familiar. Localizada estrategicamente para quem percorre o Caminho da Fé.</p>
                 <br>
-                <p>Banho quente, café da manhã reforçado e um ambiente familiar para você recarregar as energias.</p>
+                <p>Conforto, banho quente e Wi-Fi para você descansar e planejar o próximo dia de jornada.</p>
             </div>
             <div style="flex: 1; min-width: 300px;">
                 <div class="img-zoom-container">
@@ -161,28 +140,35 @@
     </section>
 
     <section id="galeria">
+        <h2 class="section-title">Nossa Estrutura</h2>
         <div class="grid-polaroid">
             <div class="polaroid">
                 <div class="img-wrap"><img src="imagens/vista.jpg" alt="Vista"></div>
-                <p>Momento de Paz</p>
+                <p>Nossa Varanda</p>
             </div>
             <div class="polaroid">
-                <div class="img-wrap"><img src="imagens/cafe.jpg" alt="Café Mineiro"></div>
-                <p>Energia para a Trilha</p>
+                <div class="img-wrap"><img src="imagens/cafe.jpg" alt="Café"></div>
+                <p>Energia Mineira</p>
+            </div>
+            <div class="polaroid">
+                <div class="img-wrap"><img src="imagens/quarto.jpg" alt="Quarto"></div>
+                <p>Quartos Aconchegantes</p>
             </div>
         </div>
     </section>
 
     <section id="localizacao">
-        <h2 class="section-title">Como Chegar</h2>
+        <h2 class="section-title">Nossa Localização</h2>
         <div class="map-frame">
             <iframe 
-                width="100%" height="100%" 
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=SUA_CHAVE_AQUI&q=Pousada+Caminho+da+Fé,Inconfidentes+MG" 
-                allowfullscreen>
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0" 
+                marginwidth="0" 
+                src="https://maps.google.com/maps?q=Pousada%20Caminho%20da%20F%C3%A9%20Inconfidentes%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed">
             </iframe>
-            <iframe src="https://maps.google.com/maps?q=Pousada%20Caminho%20da%20Fé%20Inconfidentes%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <p style="text-align: center; margin-top: 15px;">📍 MG-290, Inconfidentes - MG</p>
     </section>
