@@ -1,351 +1,364 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pousada Caminho da Fé</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Caminho da Fé</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-    *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    body{
-    font-family:'Poppins', sans-serif;
-    background:linear-gradient(to bottom,#f5f1ea,#ffffff);
-    color:#333;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #f5f1ea, #ffffff);
+            color: #333;
+        }
 
-    /* HEADER */
-    header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    background:rgba(255,255,255,0.95);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    z-index:1000;
-    box-shadow:0 2px 15px rgba(0,0,0,0.05);
-    }
+        /* HEADER */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
 
-    .logo{
-    font-family:'Playfair Display', serif;
-    font-size:26px;
-    font-weight:700;
-    color:#8b6b3e;
-    }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #8b6b3e;
+        }
 
-    nav a{
-    margin-left:30px;
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-    transition:0.3s;
-    }
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-    nav a:hover{
-    color:#8b6b3e;
-    }
+        nav a:hover {
+            color: #8b6b3e;
+        }
 
-    /* HERO */
-    .hero{
-    height:100vh;
-    background:url("imagens/fachada.jpg") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    position:relative;
-    }
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url("imagens/fachada.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
 
-    .hero::after{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.5);
-    }
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
 
-    .hero-content{
-    position:relative;
-    z-index:2;
-    }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
 
-    .hero h1{
-    font-family:'Playfair Display', serif;
-    font-size:55px;
-    margin-bottom:20px;
-    }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
 
-    .hero p{
-    font-size:20px;
-    margin-bottom:30px;
-    }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
 
-    .btn{
-    background:#8b6b3e;
-    color:white;
-    padding:14px 35px;
-    text-decoration:none;
-    border-radius:40px;
-    transition:0.3s;
-    }
+        .btn {
+            background: #8b6b3e;
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: 0.3s;
+            display: inline-block;
+        }
 
-    .btn:hover{
-    background:#a88655;
-    }
+        .btn:hover {
+            background: #a88655;
+        }
 
-    /* SEÇÕES */
-    section{
-    padding:100px 60px;
-    }
+        /* SEÇÕES GERAIS */
+        section {
+            padding: 80px 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    .section-title{
-    font-family:'Playfair Display', serif;
-    font-size:36px;
-    text-align:center;
-    margin-bottom:60px;
-    color:#8b6b3e;
-    }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #8b6b3e;
+        }
 
-    /* SOBRE */
-    .sobre{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-    font-size:18px;
-    line-height:1.8;
-    }
+        /* SOBRE */
+        .sobre {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: auto;
+        }
 
-    /* AMBIENTE */
-    .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    }
+        /* GRID AMBIENTE */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-    .grid img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:0.4s;
-    }
+        .grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
 
-    .grid img:hover{
-    transform:scale(1.05);
-    }
+        .grid img:hover {
+            transform: scale(1.03);
+        }
 
-    /* SERVIÇOS E PEREGRINOS */
-    .flex-section{
-    display:flex;
-    align-items:center;
-    gap:60px;
-    flex-wrap:wrap;
-    max-width:1100px;
-    margin:auto;
-    }
+        /* FLEX SECTIONS (Peregrinos e Serviços) */
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
 
-    .flex-img{
-    flex:1;
-    min-width: 300px;
-    }
+        .flex-img {
+            flex: 1;
+            min-width: 300px;
+        }
 
-    .flex-img img{
-    width:100%;
-    border-radius:20px;
-    height:420px;
-    object-fit:cover;
-    box-shadow:0 15px 40px rgba(0,0,0,0.15);
-    }
+        .flex-img img {
+            width: 100%;
+            height: auto; /* Resolve o problema de cortar a imagem */
+            max-height: 500px; /* Evita que a imagem fique longa demais */
+            object-fit: contain; /* Garante que a imagem apareça inteira */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-    .flex-text{
-    flex:1;
-    min-width: 300px;
-    font-size: 18px;
-    line-height: 1.8;
-    }
+        .flex-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
 
-    .flex-text h3{
-    margin-bottom:20px;
-    color:#8b6b3e;
-    font-size:26px;
-    }
+        .flex-text h3 {
+            color: #8b6b3e;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
 
-    /* MAPA */
-    iframe{
-    width:100%;
-    height:400px;
-    border:none;
-    border-radius:20px;
-    }
+        /* MAPA */
+        .map-box {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-    /* FOOTER */
-    footer{
-    background:#1e1e1e;
-    color:white;
-    text-align:center;
-    padding:40px;
-    }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
 
-    /* WHATSAPP */
-    .whatsapp{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    width:65px;
-    height:65px;
-    background:#25d366;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-    z-index:1000;
-    transition:0.3s;
-    }
+        /* FOOTER */
+        footer {
+            background: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin-top: 50px;
+        }
 
-    .whatsapp:hover{
-    transform:scale(1.1);
-    }
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: 0.3s;
+        }
 
-    .whatsapp img{
-    width:35px;
-    }
+        .whatsapp:hover { transform: scale(1.1); }
+        .whatsapp img { width: 32px; }
 
-    /* ANIMAÇÃO */
-    .fade{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
-    }
+        /* ANIMAÇÃO FADE */
+        .fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s ease-out;
+        }
 
-    .fade.active{
-    opacity:1;
-    transform:translateY(0);
-    }
+        .fade.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    @media(max-width:900px){
-        header { padding: 15px 20px; }
-        .flex-section{ flex-direction:column; }
-        section { padding: 60px 20px; }
-        .hero h1 { font-size: 35px; }
-    }
-</style>
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav { display: none; } /* Oculta menu simples no mobile para não embolar */
+            section { padding: 60px 20px; }
+            .hero h1 { font-size: 38px; }
+            .flex-container { flex-direction: column; text-align: center; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <div class="logo">Caminho da Fé</div>
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#peregrinos">Peregrinos</a>
-        <a href="#ambiente">Ambiente</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#localizacao">Localização</a>
-    </nav>
-</header>
+    <header>
+        <div class="logo">Caminho da Fé</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#peregrinos">Peregrinos</a>
+            <a href="#ambiente">Ambiente</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#localizacao">Localização</a>
+        </nav>
+    </header>
 
-<div class="hero">
-    <div class="hero-content">
-        <h1>Pousada Caminho da Fé</h1>
-        <p>Conforto, tranquilidade e uma experiência única em Inconfidentes - MG</p>
-        <a href="https://wa.me/5535999999999?text=Olá!" class="btn" target="_blank">Reservar Agora</a>
-    </div>
-</div>
-
-<section id="sobre" class="fade">
-    <h2 class="section-title">Sobre a Pousada</h2>
-    <div class="sobre">
-        <p>A Pousada Caminho da Fé oferece uma experiência acolhedora e sofisticada para quem visita Inconfidentes - MG. Nosso ambiente combina tranquilidade, conforto e hospitalidade.</p>
-        <br>
-        <p>Ideal para viajantes do Caminho da Fé e para quem busca descanso, contamos com estrutura moderna e vista privilegiada.</p>
-    </div>
-</section>
-
-<section id="peregrinos" class="fade">
-    <h2 class="section-title">Espaço do Peregrino</h2>
-    <div class="flex-section">
-        <div class="flex-img">
-            <img src="imagens/vista.jpg" alt="Vista da Pousada">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Pousada Caminho da Fé</h1>
+            <p>Conforto e tranquilidade em Inconfidentes - MG</p>
+            <a href="https://wa.me/5535999999999?text=Olá! Gostaria de informações sobre reservas." class="btn" target="_blank">Reservar Agora</a>
         </div>
-        <div class="flex-text">
-            <p>A Pousada Caminho da Fé foi pensada especialmente para acolher peregrinos que percorrem essa jornada de fé e espiritualidade.</p>
+    </div>
+
+    <section id="sobre" class="fade">
+        <h2 class="section-title">Sobre a Pousada</h2>
+        <div class="sobre">
+            <p>A Pousada Caminho da Fé oferece uma experiência acolhedora para quem visita Inconfidentes - MG. Nosso ambiente combina tranquilidade, conforto e hospitalidade, proporcionando momentos especiais para cada hóspede.</p>
             <br>
-            <p><strong>Oferecemos aos peregrinos:</strong></p>
-            <p>🥾 Local ideal para descanso pós-caminhada</p>
-            <p>🧺 Espaço para secagem de roupas</p>
-            <p>🍽 Café da manhã reforçado</p>
-            <p>🙏 Ambiente acolhedor e respeitoso</p>
-            <p>🛏 Quartos confortáveis e silenciosos</p>
+            <p>Ideal para viajantes do Caminho da Fé e para quem busca descanso com estrutura moderna e atendimento dedicado.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="ambiente" class="fade">
-    <h2 class="section-title">Ambiente</h2>
-    <div class="grid">
-        <img src="imagens/fachada.jpg">
-        <img src="imagens/entrada.webp">
-        <img src="imagens/quarto.jpg">
-        <img src="imagens/vista.jpg">
-    </div>
-</section>
-
-<section id="servicos" class="fade">
-    <h2 class="section-title">Serviços</h2>
-    <div class="flex-section">
-        <div class="flex-img">
-            <img src="imagens/servicos.jpg">
+    <section id="peregrinos" class="fade" style="background-color: #f9f6f1; max-width: 100%; width: 100%;">
+        <div style="max-width: 1200px; margin: auto;">
+            <h2 class="section-title">Espaço do Peregrino</h2>
+            <div class="flex-container">
+                <div class="flex-img">
+                    <img src="imagens/vista.jpg" alt="Espaço Peregrino">
+                </div>
+                <div class="flex-text">
+                    <p>Pensada especialmente para acolher quem percorre essa jornada de fé e superação.</p>
+                    <br>
+                    <p><strong>Diferenciais para você:</strong></p>
+                    <p>🥾 Local ideal para descanso pós-caminhada</p>
+                    <p>🧺 Espaço para secagem de roupas</p>
+                    <p>🍽 Café da manhã reforçado</p>
+                    <p>🙏 Ambiente acolhedor e respeitoso</p>
+                    <p>🛏 Quartos silenciosos</p>
+                </div>
+            </div>
         </div>
-        <div class="flex-text">
-            <h3>Conforto e Qualidade</h3>
-            <p>✔ Wi-Fi gratuito em toda a pousada</p>
-            <p>✔ Café da manhã incluso</p>
-            <p>✔ Estacionamento seguro</p>
-            <p>✔ Quartos confortáveis e bem equipados</p>
-            <p>✔ Atendimento acolhedor e personalizado</p>
+    </section>
+
+    <section id="ambiente" class="fade">
+        <h2 class="section-title">Nosso Ambiente</h2>
+        <div class="grid">
+            <img src="imagens/fachada.jpg" alt="Fachada">
+            <img src="imagens/entrada.webp" alt="Entrada">
+            <img src="imagens/quarto.jpg" alt="Quarto">
+            <img src="imagens/vista.jpg" alt="Vista">
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="localizacao" class="fade">
-    <h2 class="section-title">Localização</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.123456789!2d-46.329!3d-22.315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzU0LjAiUyA0NsKwMTknNDQuNCJX!5e0!3m2!1spt-BR!2sbr!4v123456789" allowfullscreen="" loading="lazy"></iframe>
-</section>
+    <section id="servicos" class="fade">
+        <h2 class="section-title">Serviços</h2>
+        <div class="flex-container">
+            <div class="flex-text">
+                <h3>Conforto e Qualidade</h3>
+                <p>✔ Wi-Fi gratuito em toda a pousada</p>
+                <p>✔ Café da manhã incluso</p>
+                <p>✔ Estacionamento seguro</p>
+                <p>✔ Quartos confortáveis e equipados</p>
+                <p>✔ Atendimento personalizado</p>
+            </div>
+            <div class="flex-img">
+                <img src="imagens/servicos.jpg" alt="Nossos Serviços">
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2026 Pousada Caminho da Fé - Todos os direitos reservados</p>
-</footer>
+    <section id="localizacao" class="fade">
+        <h2 class="section-title">Localização</h2>
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14785.45425633856!2d-46.3355555!3d-22.3113889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c920f18c86d3b3%3A0xc3f600465366479e!2sInconfidentes%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
 
-<a class="whatsapp" href="https://wa.me/5535999999999" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
+    <footer>
+        <p>© 2026 Pousada Caminho da Fé - Inconfidentes, MG</p>
+    </footer>
 
-<script>
-    const faders = document.querySelectorAll(".fade");
-    const appearOptions = { threshold: 0.2 };
+    <a class="whatsapp" href="https://wa.me/5535999999999" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
 
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("active");
-            appearOnScroll.unobserve(entry.target);
-        });
-    }, appearOptions);
+    <script>
+        // Animação ao rolar a página
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
-</script>
+        document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+    </script>
 
 </body>
 </html>
