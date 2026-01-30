@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,302 +8,281 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --verde:#2e7d32;
-  --verde-escuro:#1b5e20;
-  --dourado:#ffb300;
-  --claro:#f4f7f5;
-}
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-  font-family:'Poppins', sans-serif;
-  background:var(--claro);
-  color:#333;
-  scroll-behavior:smooth;
+    background:#f4f6f8;
+    color:#333;
 }
 
 /* HEADER */
 header{
-  background:linear-gradient(90deg,var(--verde),var(--verde-escuro));
-  padding:15px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  color:white;
-  position:sticky;
-  top:0;
-  z-index:1000;
+    background:linear-gradient(90deg,#1e3c2f,#2e8b57);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-  height:65px;
-  border-radius:12px;
-  background:white;
-  padding:4px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo svg{
+    width:55px;
+    height:55px;
+}
+
+.logo-texto h1{
+    font-size:22px;
+    color:#fff;
+}
+
+.logo-texto span{
+    font-size:14px;
+    color:#f4c430;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:25px;
-  font-weight:500;
-  transition:0.3s;
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
 }
 
 nav a:hover{
-  color:var(--dourado);
+    color:#f4c430;
 }
 
 /* HERO */
 .hero{
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url("imagens/vista.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:20px;
+    height:90vh;
+    background:url("imagens/entrada.webp") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    position:relative;
 }
 
-.hero h1{
-  font-size:55px;
-  margin-bottom:20px;
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
 }
 
-.hero p{
-  font-size:22px;
-  margin-bottom:30px;
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h2{
+    font-size:48px;
+    margin-bottom:20px;
 }
 
 .btn{
-  background:var(--dourado);
-  padding:15px 35px;
-  border-radius:50px;
-  text-decoration:none;
-  color:#222;
-  font-weight:700;
-  transition:0.3s;
+    display:inline-block;
+    padding:12px 28px;
+    background:#f4c430;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
 }
 
 .btn:hover{
-  transform:scale(1.05);
+    background:#fff;
 }
 
 /* SEÇÕES */
 section{
-  padding:100px 8%;
+    padding:80px 10%;
 }
 
-.section-title{
-  text-align:center;
-  font-size:36px;
-  color:var(--verde);
-  margin-bottom:60px;
+section h3{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+    color:#1e3c2f;
 }
 
 /* SOBRE */
-.sobre{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-
-.sobre img{
-  width:100%;
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.2);
-}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.card{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-  box-shadow:0 15px 35px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-10px);
+.sobre p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
 }
 
 /* GALERIA */
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.galeria img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:20px;
-  transition:0.4s;
+.galeria-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
 }
 
-.galeria img:hover{
-  transform:scale(1.08);
+.galeria-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* SERVIÇOS */
+.servicos{
+    background:#ffffff;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#f9f9f9;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:80px;
+    margin-bottom:15px;
 }
 
 /* MAPA */
 iframe{
-  width:100%;
-  height:400px;
-  border:none;
-  border-radius:20px;
+    width:100%;
+    height:400px;
+    border-radius:15px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.whatsapp img{
+    width:60px;
 }
 
 /* FOOTER */
 footer{
-  background:var(--verde-escuro);
-  color:white;
-  text-align:center;
-  padding:40px;
+    background:#1e3c2f;
+    color:#fff;
+    text-align:center;
+    padding:20px;
 }
 
-/* WHATSAPP FIXO OFICIAL */
-.whatsapp-fixo{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#25d366;
-  width:65px;
-  height:65px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
-  transition:0.3s;
-  animation:pulse 2s infinite;
-}
-
-.whatsapp-fixo:hover{
-  transform:scale(1.1);
-}
-
-.whatsapp-fixo svg{
-  width:32px;
-  height:32px;
-}
-
-/* ANIMAÇÃO PULSO */
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
-  70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
-}
-
-/* RESPONSIVO */
-@media(max-width:900px){
-  .sobre{
-    grid-template-columns:1fr;
-  }
-  .hero h1{
-    font-size:38px;
-  }
-}
 </style>
 </head>
-
 <body>
 
 <header>
-  <img src="imagens/fachada.jpg" class="logo">
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <div>
-    <h1>Pousada Caminho da Fé</h1>
-    <p>Conforto, tranquilidade e hospitalidade mineira</p>
-    <a class="btn" href="https://wa.me/5515988390771" target="_blank">
-      Reservar Agora
-    </a>
-  </div>
+<div class="logo">
+<svg viewBox="0 0 100 100">
+<circle cx="50" cy="40" r="18" fill="#f4c430"/>
+<polygon points="10,80 40,40 70,80" fill="#2e8b57"/>
+<polygon points="35,80 60,50 90,80" fill="#3cb371"/>
+</svg>
+<div class="logo-texto">
+<h1>Pousada Caminho da Fé</h1>
+<span>Inconfidentes - MG</span>
+</div>
 </div>
 
-<section id="sobre">
-  <h2 class="section-title">Sobre a Pousada</h2>
-  <div class="sobre">
-    <div>
-      <p>
-        Localizada em Inconfidentes MG, a Pousada Caminho da Fé oferece
-        ambiente acolhedor, ideal para peregrinos e turistas.
-      </p>
-      <br>
-      <p>
-        Atendimento personalizado, tranquilidade e excelente custo-benefício
-        fazem parte da nossa essência.
-      </p>
-    </div>
-    <img src="imagens/entrada.webp">
-  </div>
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#galeria">Galeria</a>
+<a href="#servicos">Serviços</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h2>Descanso, Natureza e Conforto</h2>
+<a href="#contato" class="btn">Reservar Agora</a>
+</div>
 </section>
 
-<section id="servicos">
-  <h2 class="section-title">Nossos Diferenciais</h2>
-  <div class="cards">
-    <div class="card">🌿 Ambiente familiar</div>
-    <div class="card">🛏 Quartos confortáveis</div>
-    <div class="card">📍 Ótima localização</div>
-    <div class="card">⭐ Excelente avaliação</div>
-  </div>
+<section id="sobre" class="sobre">
+<h3>Sobre a Pousada</h3>
+<p>
+A Pousada Caminho da Fé é um refúgio acolhedor em Inconfidentes - MG, 
+ideal para quem busca tranquilidade, conforto e contato com a natureza.
+Oferecemos quartos confortáveis, ambiente familiar e atendimento dedicado
+para tornar sua estadia inesquecível.
+</p>
 </section>
 
 <section id="galeria">
-  <h2 class="section-title">Galeria</h2>
-  <div class="galeria">
-    <img src="imagens/quarto.jpg">
-    <img src="imagens/vista.jpg">
-    <img src="imagens/servicos.jpg">
-  </div>
+<h3>Galeria</h3>
+<div class="galeria-grid">
+<img src="imagens/fachada.jpg">
+<img src="imagens/quarto.jpg">
+<img src="imagens/vista.jpg">
+<img src="imagens/servicos.jpg">
+</div>
 </section>
 
-<section>
-  <h2 class="section-title">Localização</h2>
-  <iframe 
-  src="https://www.google.com/maps?q=Pousada+Caminho+Da+F%C3%A9+Inconfidentes+MG&output=embed">
-  </iframe>
+<section id="servicos" class="servicos">
+<h3>Nossos Serviços</h3>
+<div class="cards">
+<div class="card">
+<h4>Café da Manhã</h4>
+<p>Delicioso café da manhã incluso na diária.</p>
+</div>
+<div class="card">
+<h4>Wi-Fi Gratuito</h4>
+<p>Internet disponível em toda a pousada.</p>
+</div>
+<div class="card">
+<h4>Estacionamento</h4>
+<p>Estacionamento privativo para hóspedes.</p>
+</div>
+</div>
 </section>
 
-<footer id="contato">
-  © 2026 – Pousada Caminho da Fé – Inconfidentes MG
-</footer>
+<section id="contato">
+<h3>Localização</h3>
+<iframe src="https://www.google.com/maps?q=Inconfidentes+MG&output=embed"></iframe>
+</section>
 
-<!-- BOTÃO WHATSAPP OFICIAL -->
-<a class="whatsapp-fixo" 
-   href="https://wa.me/5515988390771?text=Olá! Gostaria de informações sobre a Pousada Caminho da Fé." 
-   target="_blank" 
-   aria-label="WhatsApp">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <path fill="white" d="M16 0C7.164 0 0 7.163 0 16c0 2.84.744 5.616 2.158 8.05L0 32l8.224-2.146A15.94 15.94 0 0 0 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.1c-2.56 0-5.065-.687-7.252-1.988l-.52-.308-4.882 1.273 1.301-4.755-.338-.545A13.08 13.08 0 0 1 2.9 16C2.9 8.82 8.82 2.9 16 2.9S29.1 8.82 29.1 16 23.18 29.1 16 29.1z"/>
-</svg>
-
+<a class="whatsapp" href="https://wa.me/5535999999999" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
+
+<footer>
+<p>© 2026 Pousada Caminho da Fé - Todos os direitos reservados</p>
+</footer>
 
 </body>
 </html>
