@@ -134,7 +134,7 @@
             margin: auto;
         }
 
-        /* FLEX CONTAINER (Peregrinos e Serviços) */
+        /* FLEX CONTAINER */
         .flex-container {
             display: flex;
             align-items: center;
@@ -150,7 +150,7 @@
 
         .flex-img img {
             width: 100%;
-            height: auto; /* Garante que a imagem não seja cortada */
+            height: auto;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             display: block;
@@ -166,11 +166,6 @@
             color: #8b6b3e;
             font-size: 28px;
             margin-bottom: 20px;
-        }
-
-        .flex-text p {
-            margin-bottom: 15px;
-            font-size: 17px;
         }
 
         /* GRID AMBIENTE */
@@ -198,6 +193,7 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
 
         iframe {
@@ -231,13 +227,8 @@
             transition: 0.3s;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        .whatsapp-float img {
-            width: 35px;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float img { width: 35px; }
 
         /* ANIMAÇÃO FADE */
         .fade {
@@ -251,7 +242,6 @@
             transform: translateY(0);
         }
 
-        /* RESPONSIVIDADE */
         @media (max-width: 900px) {
             header { padding: 15px 25px; }
             nav { display: none; }
@@ -277,16 +267,14 @@
         <div class="hero-content">
             <h1>Pousada Caminho da Fé</h1>
             <p>Seu descanso merecido em Inconfidentes - MG</p>
-            <a href="https://wa.me/5535998171465?text=Olá! Gostaria de consultar disponibilidade de reserva." class="btn" target="_blank">Reservar via WhatsApp</a>
+            <a href="https://wa.me/5535998171465?text=Olá! Gostaria de consultar disponibilidade." class="btn" target="_blank">Reservar via WhatsApp</a>
         </div>
     </section>
 
     <section id="sobre" class="fade">
         <h2 class="section-title">A Pousada</h2>
         <div class="sobre-content">
-            <p>A Pousada Caminho da Fé oferece uma experiência acolhedora e sofisticada para quem visita Inconfidentes - MG. Nosso ambiente combina tranquilidade, conforto e hospitalidade, proporcionando momentos especiais para cada hóspede.</p>
-            <br>
-            <p>Ideal para viajantes do Caminho da Fé e para quem busca descanso, contamos com estrutura moderna, vista privilegiada e atendimento dedicado.</p>
+            <p>A Pousada Caminho da Fé oferece uma experiência acolhedora para quem visita Inconfidentes - MG. Ambiente que combina tranquilidade, conforto e hospitalidade.</p>
         </div>
     </section>
 
@@ -298,13 +286,10 @@
                     <img src="imagens/vista.jpg" alt="Vista Peregrinos">
                 </div>
                 <div class="flex-text">
-                    <p>A Pousada foi pensada especialmente para acolher peregrinos que percorrem essa jornada de fé, superação e espiritualidade.</p>
-                    <p><strong>Diferenciais pensados em você:</strong></p>
-                    <p>🥾 Local para descanso e recuperação</p>
+                    <p>🥾 Local ideal para descanso pós-caminhada</p>
                     <p>🧺 Área para lavagem e secagem de roupas</p>
-                    <p>🍽 Café da manhã reforçado e artesanal</p>
+                    <p>🍽 Café da manhã reforçado</p>
                     <p>🙏 Ambiente silencioso e respeitoso</p>
-                    <p>🛏 Quartos projetados para o máximo conforto</p>
                 </div>
             </div>
         </div>
@@ -316,23 +301,22 @@
             <img src="imagens/fachada.jpg" alt="Fachada">
             <img src="imagens/entrada.webp" alt="Entrada">
             <img src="imagens/quarto.jpg" alt="Quarto">
-            <img src="imagens/vista.jpg" alt="Vista Panorâmica">
+            <img src="imagens/vista.jpg" alt="Vista">
         </div>
     </section>
 
     <section id="servicos" class="fade">
-        <h2 class="section-title">Serviços & Comodidades</h2>
+        <h2 class="section-title">Serviços</h2>
         <div class="flex-container" style="flex-direction: row-reverse;">
             <div class="flex-img">
                 <img src="imagens/servicos.jpg" alt="Serviços">
             </div>
             <div class="flex-text">
-                <h3>Tudo o que você precisa</h3>
+                <h3>Conforto e Qualidade</h3>
                 <p>✔ Wi-Fi de alta velocidade gratuito</p>
-                <p>✔ Café da manhã completo incluso</p>
+                <p>✔ Café da manhã incluso</p>
                 <p>✔ Estacionamento privativo e seguro</p>
-                <p>✔ Quartos com TV, frigobar e enxoval premium</p>
-                <p>✔ Dicas sobre o roteiro do Caminho da Fé</p>
+                <p>✔ Quartos equipados</p>
             </div>
         </div>
     </section>
@@ -341,17 +325,17 @@
         <h2 class="section-title">Onde Estamos</h2>
         <div class="map-wrapper">
             <iframe 
-                src="http://googleusercontent.com/maps.google.com/6" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m1!2zQ2hJSm43ejFueHA3eVpRUmg1VGxZLVFsMkdr!2sUG91c2FkYSUyMENhbWluaG8lMjBEYSUyMEYlQzkl!5m2!1spt-BR!2sbr" 
                 allowfullscreen="" 
-                loading="lazy">
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
         <p style="text-align: center; margin-top: 20px; font-weight: 500;">MG-290, Inconfidentes - MG, 37576-000</p>
     </section>
 
     <footer>
-        <p>© 2026 Pousada Caminho da Fé - Todos os direitos reservados</p>
-        <p style="font-size: 14px; margin-top: 10px; color: #aaa;">Inconfidentes - Minas Gerais</p>
+        <p>© 2026 Pousada Caminho da Fé - Inconfidentes, MG</p>
     </footer>
 
     <a href="https://wa.me/5535998171465" class="whatsapp-float" target="_blank">
@@ -359,7 +343,6 @@
     </a>
 
     <script>
-        // Sistema de animação ao rolar (Fade In)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -368,9 +351,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade').forEach(section => {
-            observer.observe(section);
-        });
+        document.querySelectorAll('.fade').forEach(section => observer.observe(section));
     </script>
 
 </body>
